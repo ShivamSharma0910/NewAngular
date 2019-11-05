@@ -1,0 +1,26 @@
+<p>create-lead works!</p>
+<h1>{{ name | uppercase}}</h1>
+<h2>{{ age  }}</h2>
+<h2>{{pi}}</h2>
+<hr>
+<div style="text-align:center">
+    <h1>
+        Welcome to {{title}}
+    </h1>
+</div>
+<div> Months :
+    <select>
+        <option>Select_Me</option>
+        <option *ngFor="let i of months">{{i}}</option>
+    </select>
+</div>
+<hr>
+<div style="text-align:center">
+    <div>Weeks:
+        <select>
+            <option>Select_Me</option>
+            <option *ngFor="let w of weeks"> {{w}}</option>
+        </select>
+
+    </div>
+</div>

@@ -1,0 +1,42 @@
+<!-- 
+           <div class="container">
+					<pre>{{ countries| json}}</pre>
+          <pre>{{ countries.res_data | json}}</pre>
+        
+          <pre *ngFor="let country of countries.res_data">{{country.country_name}} </pre>
+              <div *ngFor="let country of countries.res_data">
+                  <pre>{{country| json}}</pre>
+                  <pre>{{cont| json}}</pre>
+              </div>
+              <pre>{{cont| json}}</pre>
+              <pre>{{ data | json}}</pre>
+            </div> -->
+              
+            <!-- <pre>{{ states | json}}</pre> -->
+
+
+<div class="create-account">
+<div class="row">
+    <div class="col-md-6">
+      <form [formGroup]="createAccountForm">
+				<div class="form-group">
+          <label>Country</label>
+				  <select formControlName="country" class="form-control" (change)="onChangeCountry($event.target.value)">
+             
+              <option *ngFor="let country of countries" [value]="country.country_id"> {{country.country_name}}</option>
+				  </select>
+				</div>
+				<div class="form-group" >
+          <label>State</label>
+				  <select formControlName="state" class="form-control" >
+					<option *ngFor="let state of states" value=""> {{state.state_name}}</option>
+					<option ></option>
+				  </select>
+				</div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+ 
